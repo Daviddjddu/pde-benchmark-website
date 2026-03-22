@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import benchmarks from "./benchmarks_first50.json";
+import benchmarks from "./benchmarks_all200.json";
 
 function BenchmarkCard({ item, visibleFields, compact }) {
   return (
