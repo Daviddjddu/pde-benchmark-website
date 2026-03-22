@@ -1,0 +1,1302 @@
+[
+  {
+    "id": "1",
+    "title": "Heat / Diffusion equation",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Heat / Diffusion equation. Consider the initial-boundary value problem u_t = α(u_xx + u_yy) on 0<x<1, 0<y<1, t>0, with boundary condition u=0 on x=0,1 and y=0,1, and initial data u(x,y,0)=sin(πx)sin(πy). Take α=1 and final time T=0.1. The analytic solution is u(x,y,t)=exp(-2απ^2 t) sin(πx) sin(πy).",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = α Δu",
+      "domain": "0<x<1, 0<y<1",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "u(x,y,t)=exp(-2απ^2 t) sin(πx) sin(πy)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems",
+      "verified_source_url": "https://faculty.washington.edu/rjl/fdmbook/",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "2",
+    "title": "Wave equation",
+    "family": "Time-dependent PDE",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Wave propagation / electromagnetics",
+    "description": "Wave equation. Consider u_tt = c^2 u_xx on 0<x<1, t>0, with fixed-end boundary conditions u(0,t)=u(1,t)=0, initial displacement u(x,0)=sin(πx), and initial velocity u_t(x,0)=0. Take c=1 and final time T=2. The analytic solution is u(x,t)=cos(πt) sin(πx).",
+    "benchmarkInfo": {
+      "canonical_form": "u_tt = c^2 Δu",
+      "domain": "0<x<1",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "u(x,t)=cos(πt) sin(πx)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems",
+      "verified_source_url": "https://faculty.washington.edu/rjl/fdmbook/",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "3",
+    "title": "Linear advection",
+    "family": "Transport / hyperbolic / dispersive",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Transport / advection",
+    "description": "Linear advection. Consider the periodic transport problem u_t + a u_x = 0 for x∈[0,1], 0<t≤1, with periodic boundary condition u(0,t)=u(1,t) and initial data u(x,0)=exp(-100(x-0.3)^2). Take a=1. The analytic solution is u(x,t)=exp(-100((x-t)-0.3)^2) interpreted periodically on [0,1].",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + c·∇u = 0",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "u(x,t)=exp(-100((x-t)-0",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Finite Volume Methods for Hyperbolic Problems",
+      "verified_source_url": "https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "4",
+    "title": "Convection–diffusion",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Convection–diffusion. Consider the singularly perturbed boundary-value problem -εu''(x) + u'(x) = 1 for 0<x<1 with boundary conditions u(0)=0 and u(1)=0. Take ε=10^-3. This is a steady problem, so no initial condition is prescribed. The analytic solution is u(x)=x-(exp(-(1-x)/ε)-exp(-1/ε))/(1-exp(-1/ε)).",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + c·∇u = α Δu",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "u(x)=x-(exp(-(1-x)/ε)-exp(-1/ε))/(1-exp(-1/ε))",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Robust Numerical Methods for Singularly Perturbed Differential Equations",
+      "verified_source_url": "https://www.karlin.mff.cuni.cz/~knobloch/FILES/Roos-Stynes-Tobiska.pdf",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "5",
+    "title": "Reaction–diffusion (scalar)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Reaction–diffusion (scalar). Consider the bistable reaction–diffusion equation u_t = D u_xx + u(1-u)(u-a) on -50<x<50, t>0, with homogeneous Neumann boundary conditions u_x(-50,t)=u_x(50,t)=0 and step initial data u(x,0)=1 for x<0 and u(x,0)=0 for x≥0. Take D=1 and a=0.3. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = D Δu + f(u)",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Mathematical Biology I: An Introduction",
+      "verified_source_url": "https://pcleon.if.ufrgs.br/pub/listas-sistdin/MurrayI.pdf",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "6",
+    "title": "Poisson equation",
+    "family": "Elliptic",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Elliptic PDE / potential / structural modeling",
+    "description": "Poisson equation. Consider -Δu = f on the unit square Ω=(0,1)^2. Boundary conditions: u=0 on ∂Ω. Initial conditions: None (steady problem). Parameters: no free parameters. For the manufactured-solution benchmark, take u(x,y)=sin(πx)sin(πy), so that f(x,y)=2π^2 sin(πx)sin(πy). Analytic solution: u(x,y)=sin(πx)sin(πy).",
+    "benchmarkInfo": {
+      "canonical_form": "-Δu = f",
+      "domain": "the unit square Ω=(0,1)^2",
+      "boundary_conditions": "u=0 on ∂Ω",
+      "initial_conditions": "None (steady problem)",
+      "parameters": "no free parameters. For the manufactured-solution benchmark, take u(x,y)=sin(πx)sin(πy), so that f(x,y)=2π^2 sin(πx)sin(πy)",
+      "analytic_solution": "u(x,y)=sin(πx)sin(πy)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems",
+      "verified_source_url": "https://faculty.washington.edu/rjl/fdmbook/",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "7",
+    "title": "Laplace equation",
+    "family": "Elliptic",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Elliptic PDE / potential / structural modeling",
+    "description": "Laplace equation. Consider Δu=0 on the unit square Ω=(0,1)^2. Boundary conditions: u(x,0)=0, u(x,1)=sin(πx), u(0,y)=0, and u(1,y)=0. Initial conditions: None (steady problem). Parameters: no free parameters. Analytic solution: u(x,y)=sinh(πy)sin(πx)/sinh(π).",
+    "benchmarkInfo": {
+      "canonical_form": "Δu = 0",
+      "domain": "the unit square Ω=(0,1)^2",
+      "boundary_conditions": "u(x,0)=0, u(x,1)=sin(πx), u(0,y)=0, and u(1,y)=0",
+      "initial_conditions": "None (steady problem)",
+      "parameters": "no free parameters",
+      "analytic_solution": "u(x,y)=sinh(πy)sin(πx)/sinh(π)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Numerical Solution of Partial Differential Equations: An Introduction",
+      "verified_source_url": "https://www.cambridge.org/core/books/numerical-solution-of-partial-differential-equations/EB8E5037C4A49F78D91C0AF7EE4CC7FA",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "8",
+    "title": "Helmholtz equation",
+    "family": "Elliptic",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Elliptic PDE / potential / structural modeling",
+    "description": "Helmholtz equation. Consider -Δu - k^2 u = f on the unit square Ω=(0,1)^2. Boundary conditions: u=0 on ∂Ω. Initial conditions: None (steady problem). Parameters: k=10. Choose the manufactured solution u(x,y)=sin(πx)sin(πy), which gives f(x,y)=(2π^2-k^2)sin(πx)sin(πy). Analytic solution: u(x,y)=sin(πx)sin(πy).",
+    "benchmarkInfo": {
+      "canonical_form": "(-Δ - k^2)u = f",
+      "domain": "the unit square Ω=(0,1)^2",
+      "boundary_conditions": "u=0 on ∂Ω",
+      "initial_conditions": "None (steady problem)",
+      "parameters": "k=10. Choose the manufactured solution u(x,y)=sin(πx)sin(πy), which gives f(x,y)=(2π^2-k^2)sin(πx)sin(πy)",
+      "analytic_solution": "u(x,y)=sin(πx)sin(πy)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Numerical Solution of Partial Differential Equations: An Introduction",
+      "verified_source_url": "https://www.cambridge.org/core/books/numerical-solution-of-partial-differential-equations/EB8E5037C4A49F78D91C0AF7EE4CC7FA",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "9",
+    "title": "Biharmonic equation",
+    "family": "Elliptic",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Elliptic PDE / potential / structural modeling",
+    "description": "Biharmonic equation. Consider the clamped-plate problem Δ^2u=f on the unit square Ω=(0,1)^2 with boundary conditions u=0 and ∂u/∂n=0 on ∂Ω. This is a steady problem, so no initial condition is prescribed. Take the manufactured solution u(x,y)=x^2(1-x)^2 y^2(1-y)^2, which yields f(x,y)=8(3x^4-6x^3+36x^2y^2-36x^2y+9x^2-36xy^2+36xy-6x+3y^4-6y^3+9y^2-6y+1). The analytic solution is u(x,y)=x^2(1-x)^2 y^2(1-y)^2.",
+    "benchmarkInfo": {
+      "canonical_form": "Δ^2 u = f",
+      "domain": "the unit square Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "u(x,y)=x^2(1-x)^2 y^2(1-y)^2",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "SPP-1748 Benchmark Collection: Classical Benchmarks in Solid Mechanics",
+      "verified_source_url": "https://publications.cms.bgu.tum.de/2020_schroeder_benchmarks.pdf",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "10",
+    "title": "Anisotropic diffusion",
+    "family": "Elliptic",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Anisotropic diffusion. Consider -∇·(A∇u)=f on the unit square Ω=(0,1)^2. Boundary conditions: u=0 on ∂Ω. Initial conditions: None (steady problem). Parameters: diffusion tensor A=diag(1,100). Choose the manufactured solution u(x,y)=sin(πx)sin(πy), which gives f(x,y)=101π^2 sin(πx)sin(πy). Analytic solution: u(x,y)=sin(πx)sin(πy).",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = ∇·(K∇u)",
+      "domain": "the unit square Ω=(0,1)^2",
+      "boundary_conditions": "u=0 on ∂Ω",
+      "initial_conditions": "None (steady problem)",
+      "parameters": "diffusion tensor A=diag(1,100). Choose the manufactured solution u(x,y)=sin(πx)sin(πy), which gives f(x,y)=101π^2 sin(πx)sin(πy)",
+      "analytic_solution": "u(x,y)=sin(πx)sin(πy)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Numerical Solution of Partial Differential Equations: An Introduction",
+      "verified_source_url": "https://www.cambridge.org/core/books/numerical-solution-of-partial-differential-equations/EB8E5037C4A49F78D91C0AF7EE4CC7FA",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "11",
+    "title": "Incompressible Navier–Stokes",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Fluid dynamics",
+    "description": "Incompressible Navier–Stokes. Consider the two-dimensional lid-driven cavity problem in the unit square Ω=(0,1)^2 governed by u_t + u·∇u = -∇p + (1/Re)Δu with ∇·u=0. Impose no-slip conditions on all walls, with the top lid moving at unit horizontal velocity and the other three walls stationary. Start from rest. Standard benchmark Reynolds numbers are Re=100, 400, and 1000. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + u·∇u = -∇p/ρ + νΔu,  ∇·u=0",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "High-Re Solutions for Incompressible Flow Using the Navier-Stokes Equations and a Multigrid Method",
+      "verified_source_url": "https://www.sciencedirect.com/science/article/abs/pii/0021999182900584",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "12",
+    "title": "Incompressible Stokes",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": false,
+    "applicationField": "Fluid dynamics",
+    "description": "Incompressible Stokes. Consider the steady Stokes system -Δu + ∇p = 0 and ∇·u = 0 in the unit square Ω=(0,1)^2. Impose no-slip boundary conditions u=(0,0) on the left, right, and bottom walls and lid velocity u=(1,0) on the top wall. This is a steady problem, so no initial condition is prescribed. Take viscosity ν=1 in nondimensional units. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "-∇p + νΔu = f,  ∇·u=0",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Streamline Topologies in Stokes Flow Within Lid-Driven Cavities",
+      "verified_source_url": "https://link.springer.com/article/10.1007/s00162-003-0095-z",
+      "source_type": "paper",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "13",
+    "title": "Euler equations (compressible)",
+    "family": "Fluid dynamics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Fluid dynamics",
+    "description": "Euler equations (compressible). Consider the Sod shock-tube problem for the one-dimensional Euler equations on 0<x<1 with initial data (ρ,u,p)=(1,0,1) for x<0.5 and (ρ,u,p)=(0.125,0,0.1) for x>0.5. Use γ=1.4 and outflow boundary conditions. Analytic solution: None. Representation solution: entropy/Riemann solution constructed from characteristics and the Rankine–Hugoniot condition; for piecewise-constant initial data this yields a self-similar solution in x/t.",
+    "benchmarkInfo": {
+      "canonical_form": "U_t + ∇·F(U)=0",
+      "domain": "0<x<1",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": "entropy/Riemann solution constructed from characteristics and the Rankine–Hugoniot condition; for piecewise-constant initial data this yields a self-similar solution in x/t"
+    },
+    "source": {
+      "verified_source_title": "A Survey of Several Finite Difference Methods for Systems of Nonlinear Hyperbolic Conservation Laws",
+      "verified_source_url": "https://www.sciencedirect.com/science/article/pii/0021999178900232",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "14",
+    "title": "Burgers’ equation (viscous)",
+    "family": "Transport / hyperbolic / dispersive",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "",
+    "description": "Burgers’ equation (viscous). Consider u_t + (u^2/2)_x = νu_xx on x∈[0,1], t>0, with periodic boundary conditions and initial data u(x,0)=sin(2πx). Take ν=0.01. Analytic solution: None. Representation solution: exact solution via the Cole–Hopf transform; write u=-2ν(φ_x/φ), where φ_t=νφ_xx with periodic boundary conditions and φ(x,0)=exp(cos(2πx)/(4πν)).",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + u u_x = ν u_xx",
+      "domain": "x∈[0,1]",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": "exact solution via the Cole–Hopf transform; write u=-2ν(φ_x/φ), where φ_t=νφ_xx with periodic boundary conditions and φ(x,0)=exp(cos(2πx)/(4πν))"
+    },
+    "source": {
+      "verified_source_title": "Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems",
+      "verified_source_url": "https://faculty.washington.edu/rjl/fdmbook/",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "15",
+    "title": "Burgers’ equation (inviscid)",
+    "family": "Transport / hyperbolic / dispersive",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "",
+    "description": "Burgers’ equation (inviscid). Consider the Cauchy problem u_t + (u^2/2)_x = 0 for x∈ℝ, t>0. Boundary conditions: none on the whole line. Initial conditions: u(x,0)=1 for x<0 and u(x,0)=0 for x>0. Parameters: no free parameters. Analytic solution: the entropy shock solution u(x,t)=1 for x<t/2 and u(x,t)=0 for x>t/2, with shock speed 1/2.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + u u_x = 0",
+      "domain": "",
+      "boundary_conditions": "none on the whole line",
+      "initial_conditions": "u(x,0)=1 for x<0 and u(x,0)=0 for x>0",
+      "parameters": "no free parameters",
+      "analytic_solution": "the entropy shock solution u(x,t)=1 for x<t/2 and u(x,t)=0 for x>t/2, with shock speed 1/2",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Finite Volume Methods for Hyperbolic Problems",
+      "verified_source_url": "https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "16",
+    "title": "Shallow water equations",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Fluid dynamics",
+    "description": "Shallow water equations. Consider the one-dimensional dam-break Riemann problem for h_t + (hu)_x = 0 and (hu)_t + (hu^2 + 1/2 g h^2)_x = 0 on 0<x<1 with initial data h(x,0)=3, u(x,0)=0 for x<0.5 and h(x,0)=1, u(x,0)=0 for x>0.5. Take g=1 and outflow boundaries. Analytic solution: None. Representation solution: entropy/Riemann solution constructed from characteristics and the Rankine–Hugoniot condition; for piecewise-constant initial data this yields a self-similar solution in x/t.",
+    "benchmarkInfo": {
+      "canonical_form": "h_t + ∇·(h u)=0; (hu)_t + ∇·(hu⊗u + ½ g h^2 I)=S",
+      "domain": "0<x<1",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": "entropy/Riemann solution constructed from characteristics and the Rankine–Hugoniot condition; for piecewise-constant initial data this yields a self-similar solution in x/t"
+    },
+    "source": {
+      "verified_source_title": "Finite Volume Methods for Hyperbolic Problems",
+      "verified_source_url": "https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "17",
+    "title": "Saint-Venant (1D shallow water)",
+    "family": "Fluid dynamics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Fluid dynamics",
+    "description": "Saint-Venant (1D shallow water). Consider the one-dimensional shallow-water system h_t + (hu)_x = 0 and (hu)_t + (hu^2 + 1/2 g h^2)_x = 0 for x∈ℝ, t>0, with flat bottom z_b=0 and dam-break initial data h(x,0)=2, u(x,0)=0 for x<0 and h(x,0)=1, u(x,0)=0 for x>0. No boundary conditions are needed because the domain is the whole line. Take g=1. Analytic solution: the self-similar Riemann solution depending on x/t.",
+    "benchmarkInfo": {
+      "canonical_form": "h_t + (hu)_x=0; (hu)_t + (hu^2 + ½ g h^2)_x=S",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "the self-similar Riemann solution depending on x/t",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Finite Volume Methods for Hyperbolic Problems",
+      "verified_source_url": "https://www.cambridge.org/core/books/finite-volume-methods-for-hyperbolic-problems/97D5D1ACB1926DA1D4D52EAD6909E2B9",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "18",
+    "title": "Boussinesq approximation",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Fluid dynamics",
+    "description": "Boussinesq approximation. Consider the dimensionless Boussinesq system u_t + u·∇u + ∇p = Pr Δu + Pr Ra T e_y, ∇·u = 0, and T_t + u·∇T = ΔT in Ω=(0,1)^2 for t>0. Impose no-slip boundary conditions u=0 on ∂Ω, thermal boundary conditions T=1 on y=0, T=0 on y=1, and ∂_x T=0 on x=0 and x=1. Take Pr=1 and Ra=10^4. Start from u(x,y,0)=0 and T(x,y,0)=1-y+0.01 sin(πx)sin(πy). Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + u·∇u = -∇p + νΔu + Ra Pr θ e_z;  θ_t+u·∇θ=κΔθ",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Introduction to Hydrodynamic Stability, Chapter 6: Rayleigh–Bénard Convection",
+      "verified_source_url": "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/7ED603621906C7695CD25142E3F3599B/9780511809064c6_p93-122_CBO.pdf/rayleighbenard_convection.pdf",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "19",
+    "title": "Magnetohydrodynamics (MHD)",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Fluid dynamics",
+    "description": "Magnetohydrodynamics (MHD). Consider the two-dimensional compressible ideal MHD system for density ρ, velocity v, magnetic field B, and total energy E on the periodic square [0,2π]^2, together with the constraint ∇·B=0. Boundary conditions: periodic in both spatial directions. Initial conditions: ρ(x,y,0)=γ^2, p(x,y,0)=γ, v(x,y,0)=(-sin y, sin x), and B(x,y,0)=(-sin y, sin 2x). Parameters: γ=5/3. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "Navier–Stokes + induction equation",
+      "domain": "the periodic square [0,2π]^2",
+      "boundary_conditions": "periodic in both spatial directions",
+      "initial_conditions": "ρ(x,y,0)=γ^2, p(x,y,0)=γ, v(x,y,0)=(-sin y, sin x), and B(x,y,0)=(-sin y, sin 2x)",
+      "parameters": "γ=5/3",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Small-Scale Structure of Two-Dimensional Magnetohydrodynamic Turbulence",
+      "verified_source_url": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/smallscale-structure-of-twodimensional-magnetohydrodynamic-turbulence/86E2DC0E1E55B20E246C021992E602AB",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "20",
+    "title": "Vorticity–streamfunction (2D)",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Fluid dynamics",
+    "description": "Vorticity–streamfunction (2D). Consider ω_t + ψ_y ω_x - ψ_x ω_y = νΔω on the periodic square [0,2π]^2, coupled with -Δψ=ω. Boundary conditions: periodic for both ω and ψ. Initial conditions: ω(x,y,0)=2 sin x sin y. Parameters: ν=10^-3. Analytic solution: ω(x,y,t)=2e^{-2νt} sin x sin y for the Taylor–Green decay benchmark.",
+    "benchmarkInfo": {
+      "canonical_form": "ω_t + u·∇ω = νΔω;  Δψ=ω;  u=∇⊥ψ",
+      "domain": "the periodic square [0,2π]^2",
+      "boundary_conditions": "periodic for both ω and ψ",
+      "initial_conditions": "ω(x,y,0)=2 sin x sin y",
+      "parameters": "ν=10^-3",
+      "analytic_solution": "ω(x,y,t)=2e^{-2νt} sin x sin y for the Taylor–Green decay benchmark",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Taylor–Green Vortex",
+      "verified_source_url": "https://iist.cygnusdvlp.in/sites/default/files/2025-06/taylor_green.pdf",
+      "source_type": "note",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "21",
+    "title": "Maxwell’s equations (time-domain)",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Wave propagation / electromagnetics",
+    "description": "Maxwell’s equations (time-domain). Consider the two-dimensional TM cavity problem on Ω=(0,1)^2 with perfectly conducting walls, so E_z=0 on ∂Ω. Take initial fields E_z(x,y,0)=sin(πx)sin(πy) and H_x(x,y,0)=H_y(x,y,0)=0 in vacuum with c=1. The analytic solution is the cavity mode E_z(x,y,t)=cos(√2 π t) sin(πx) sin(πy).",
+    "benchmarkInfo": {
+      "canonical_form": "E_t = (1/ε)(∇×H - J); H_t = -(1/μ)(∇×E)",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "the cavity mode E_z(x,y,t)=cos(√2 π t) sin(πx) sin(πy)",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Computational Electrodynamics: The Finite-Difference Time-Domain Method",
+      "verified_source_url": "https://us.artechhouse.com/Computational-Electrodynamics-The-Finite-Difference-Time-Domain-Method-Third-Edition-P2342.aspx",
+      "source_type": "source",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "22",
+    "title": "Maxwell (frequency-domain)",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": true,
+    "applicationField": "Wave propagation / electromagnetics",
+    "description": "Maxwell (frequency-domain). Consider time-harmonic scattering of a plane wave by a perfectly conducting circular cylinder of radius a=1 in two dimensions. In TM polarization, solve Δu + k^2 u = 0 in the exterior domain r>1, where the total field is u=u^i+u^s and the incident field is u^i(x,y)=exp(ikx). Boundary conditions: u=0 on r=1, impose the Sommerfeld radiation condition at infinity, and on the truncated computational boundary r=4 use the first-order absorbing condition ∂_r u^s - iku^s=0. Initial conditions: None (steady frequency-domain problem). Parameters: k=2π and outer truncation radius R=4. Analytic solution: cylindrical-harmonic (Fourier–Bessel/Hankel) scattering series for the perfectly conducting circular cylinder.",
+    "benchmarkInfo": {
+      "canonical_form": "∇×(μ^{-1}∇×E) - ω^2 ε E = iωJ",
+      "domain": "",
+      "boundary_conditions": "u=0 on r=1, impose the Sommerfeld radiation condition at infinity, and on the truncated computational boundary r=4 use the first-order absorbing condition ∂_r u^s - iku^s=0",
+      "initial_conditions": "None (steady frequency-domain problem)",
+      "parameters": "k=2π and outer truncation radius R=4",
+      "analytic_solution": "cylindrical-harmonic (Fourier–Bessel/Hankel) scattering series for the perfectly conducting circular cylinder",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Studies in Radar Cross Sections I: Diffraction and Scattering by Regular Bodies",
+      "verified_source_url": "https://scispace.com/pdf/studies-in-radar-cross-sections-l-diffraction-and-scattering-57vjdmrl1e.pdf",
+      "source_type": "paper",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "23",
+    "title": "Telegrapher’s equations",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Wave propagation / electromagnetics",
+    "description": "Telegrapher’s equations. Benchmark problem: Lossy transmission-line pulse propagation. Formulation: V_x = -L I_t - R I and I_x = -C V_t - G V on 0<x<1, t>0. Domain: 0<x<1. Boundary conditions: V(0,t)=sin(2πt) for 0≤t≤1 and I(1,t)=V(1,t) for a matched load. Initial conditions: V(x,0)=0 and I(x,0)=0. Parameters: L=C=1 and R=G=0.1. Analytic solution: None. Representation solution: Laplace-transform solution of the lossy transmission-line system with the matched-load boundary condition.",
+    "benchmarkInfo": {
+      "canonical_form": "V_x = -L I_t - R I; I_x = -C V_t - G V",
+      "domain": "0<x<1",
+      "boundary_conditions": "V(0,t)=sin(2πt) for 0≤t≤1 and I(1,t)=V(1,t) for a matched load",
+      "initial_conditions": "V(x,0)=0 and I(x,0)=0",
+      "parameters": "L=C=1 and R=G=0.1",
+      "analytic_solution": "None",
+      "representation_solution": "Laplace-transform solution of the lossy transmission-line system with the matched-load boundary condition"
+    },
+    "source": {
+      "verified_source_title": "Telegrapher's Equations",
+      "verified_source_url": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electro-Optics/Book%3A_Electromagnetics_I_%28Ellingson%29/03%3A_Transmission_Lines/3.05%3A_Telegraphers_Equations",
+      "source_type": "textbook-like notes",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "24",
+    "title": "Drift–diffusion (semiconductors)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "1D",
+    "steady": true,
+    "hasAnalytic": false,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Drift–diffusion (semiconductors). Consider the stationary one-dimensional drift–diffusion–Poisson system J_n' = 0, J_p' = 0, and -λ^2 ψ'' = p-n+C(x) on 0<x<1, where J_n = n' - n ψ' and J_p = -p' - p ψ'. Boundary conditions: Ohmic contacts n(0)=n_L, p(0)=p_L, ψ(0)=0 and n(1)=n_R, p(1)=p_R, ψ(1)=0.5. Initial conditions: None (steady problem). Parameters: C(x)=-32 for 0≤x<0.5, C(x)=32 for 0.5<x≤1, and λ=1. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "n_t = ∇·(D_n∇n - μ_n n ∇φ)+R;  -∇·(ε∇φ)=q(p-n+C)",
+      "domain": "0<x<1",
+      "boundary_conditions": "Ohmic contacts n(0)=n_L, p(0)=p_L, ψ(0)=0 and n(1)=n_R, p(1)=p_R, ψ(1)=0.5",
+      "initial_conditions": "None (steady problem)",
+      "parameters": "C(x)=-32 for 0≤x<0.5, C(x)=32 for 0.5<x≤1, and λ=1",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Semiconductor Equations",
+      "verified_source_url": "https://link.springer.com/book/10.1007/978-3-7091-6961-2",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "25",
+    "title": "Schrödinger equation (linear)",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Quantum mechanics",
+    "description": "Schrödinger equation (linear). Consider iψ_t = -(1/2)ψ_xx + (1/2)x^2 ψ on the interval -8≤x≤8 for 0<t≤1. Boundary conditions: ψ(-8,t)=ψ(8,t)=0. Initial conditions: ψ(x,0)=π^(-1/4)exp(-(x-1)^2/2). Parameters: ħ=1 and m=1. Analytic solution: the harmonic-oscillator coherent state with center x_c(t)=cos t and phase given by the harmonic-oscillator propagator.",
+    "benchmarkInfo": {
+      "canonical_form": "i u_t = -½ Δu + V u",
+      "domain": "",
+      "boundary_conditions": "ψ(-8,t)=ψ(8,t)=0",
+      "initial_conditions": "ψ(x,0)=π^(-1/4)exp(-(x-1)^2/2)",
+      "parameters": "ħ=1 and m=1",
+      "analytic_solution": "the harmonic-oscillator coherent state with center x_c(t)=cos t and phase given by the harmonic-oscillator propagator",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Linear Harmonic Oscillator",
+      "verified_source_url": "https://www.ks.uiuc.edu/Services/Class/PHYS480/qm_PDF/chp4.pdf",
+      "source_type": "lecture notes",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "26",
+    "title": "Nonlinear Schrödinger (NLS)",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Quantum mechanics",
+    "description": "Nonlinear Schrödinger (NLS). Consider the focusing cubic NLS iψ_t + ψ_xx + 2|ψ|^2ψ = 0 for x∈ℝ, t>0. Boundary conditions: none on the whole line. Initial conditions: ψ(x,0)=sech(x). Parameters: no free parameters. Analytic solution: the one-soliton ψ(x,t)=sech(x)e^{it}.",
+    "benchmarkInfo": {
+      "canonical_form": "i u_t = -½ Δu + g|u|^2 u",
+      "domain": "",
+      "boundary_conditions": "none on the whole line",
+      "initial_conditions": "ψ(x,0)=sech(x)",
+      "parameters": "no free parameters",
+      "analytic_solution": "the one-soliton ψ(x,t)=sech(x)e^{it}",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Linear and Nonlinear Waves",
+      "verified_source_url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032954",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "27",
+    "title": "Gross–Pitaevskii",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Quantum mechanics",
+    "description": "Gross–Pitaevskii. Consider iψ_t = -(1/2)ψ_xx + (1/2)x^2 ψ + β|ψ|^2ψ on the interval -8≤x≤8 for 0<t≤1. Boundary conditions: ψ(-8,t)=ψ(8,t)=0. Initial conditions: ψ(x,0)=π^(-1/4)e^{-x^2/2}. Parameters: β=100. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "i u_t = -½ Δu + V u + g|u|^2 u",
+      "domain": "",
+      "boundary_conditions": "ψ(-8,t)=ψ(8,t)=0",
+      "initial_conditions": "ψ(x,0)=π^(-1/4)e^{-x^2/2}",
+      "parameters": "β=100",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Linear and Nonlinear Waves",
+      "verified_source_url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032954",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "28",
+    "title": "Fokker–Planck",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Stochastic processes / probability",
+    "description": "Fokker–Planck. Consider p_t = p_xx + (x p)_x on x∈ℝ for t>0. Initial conditions: p(x,0)=(2πσ_0^2)^(-1/2) exp(-(x-μ_0)^2/(2σ_0^2)) with μ_0=1 and σ_0^2=0.25. Parameters: μ_0=1 and σ_0^2=0.25. Analytic solution: p(x,t)=(2πσ^2(t))^(-1/2) exp(-(x-μ(t))^2/(2σ^2(t))) with μ(t)=e^{-t} and σ^2(t)=1+(σ_0^2-1)e^{-2t}.",
+    "benchmarkInfo": {
+      "canonical_form": "p_t = -∇·(b p) + ∇·(D∇p)",
+      "domain": "x∈ℝ",
+      "boundary_conditions": "",
+      "initial_conditions": "p(x,0)=(2πσ_0^2)^(-1/2) exp(-(x-μ_0)^2/(2σ_0^2)) with μ_0=1 and σ_0^2=0.25",
+      "parameters": "μ_0=1 and σ_0^2=0.25",
+      "analytic_solution": "p(x,t)=(2πσ^2(t))^(-1/2) exp(-(x-μ(t))^2/(2σ^2(t))) with μ(t)=e^{-t} and σ^2(t)=1+(σ_0^2-1)e^{-2t}",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "The Fokker-Planck Equation: Methods of Solution and Applications",
+      "verified_source_url": "https://link.springer.com/book/10.1007/978-3-642-61544-3",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "29",
+    "title": "Kolmogorov forward (OU)",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": true,
+    "applicationField": "Stochastic processes / probability",
+    "description": "Kolmogorov forward (OU). Consider p_t = p_xx + (x p)_x on the interval -8≤x≤8 for t>0. Boundary conditions: no-flux, p_x + x p = 0 at x=-8 and x=8. Initial conditions: Gaussian with mean μ_0=0 and variance σ_0^2=4. Parameters: μ_0=0 and σ_0^2=4. Analytic solution: the Gaussian density with mean μ(t)=0 and variance σ^2(t)=1+3e^{-2t}.",
+    "benchmarkInfo": {
+      "canonical_form": "p_t = ∇·(x p) + σ^2/2 Δp",
+      "domain": "",
+      "boundary_conditions": "no-flux, p_x + x p = 0 at x=-8 and x=8",
+      "initial_conditions": "Gaussian with mean μ_0=0 and variance σ_0^2=4",
+      "parameters": "μ_0=0 and σ_0^2=4",
+      "analytic_solution": "the Gaussian density with mean μ(t)=0 and variance σ^2(t)=1+3e^{-2t}",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "The Fokker-Planck Equation: Methods of Solution and Applications",
+      "verified_source_url": "https://link.springer.com/book/10.1007/978-3-642-61544-3",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "30",
+    "title": "Boltzmann equation (kinetic)",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "Velocity space",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Kinetic theory / plasma",
+    "description": "Boltzmann equation (kinetic). Benchmark problem: Spatially homogeneous relaxation to Maxwellian. Formulation: f_t = Q(f,f) for v∈[-8,8]^2 and t>0. Domain: v∈[-8,8]^2. Boundary conditions: no physical-space boundary conditions are needed in the homogeneous setting; the velocity domain is truncated numerically on [-8,8]^2. Initial conditions: f(v,0)=0.5 M(v-u_0)+0.5 M(v+u_0), where M is the unit Maxwellian and u_0=(2,0). Parameters: unit collision scaling. Analytic solution: None. Representation solution: weak solution in integral form with the Boltzmann collision operator.",
+    "benchmarkInfo": {
+      "canonical_form": "f_t + v·∇_x f = Q(f,f)",
+      "domain": "v∈[-8,8]^2",
+      "boundary_conditions": "no physical-space boundary conditions are needed in the homogeneous setting; the velocity domain is truncated numerically on [-8,8]^2",
+      "initial_conditions": "f(v,0)=0.5 M(v-u_0)+0.5 M(v+u_0), where M is the unit Maxwellian and u_0=(2,0)",
+      "parameters": "unit collision scaling",
+      "analytic_solution": "None",
+      "representation_solution": "weak solution in integral form with the Boltzmann collision operator"
+    },
+    "source": {
+      "verified_source_title": "The Boltzmann Equation and Its Applications",
+      "verified_source_url": "https://link.springer.com/book/10.1007/978-1-4612-1039-9",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "31",
+    "title": "Vlasov–Poisson",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D1V",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Elliptic PDE / potential / structural modeling",
+    "description": "Vlasov–Poisson. Consider the one-dimensional Vlasov–Poisson system f_t + v f_x + E f_v = 0 and E_x = 1 minus the velocity integral of f over the truncated velocity domain, on x in [0,4pi], v in [-6,6], t > 0. Boundary conditions: periodic in x and truncated velocity domain in v. Initial conditions: f(x,v,0) = (1 + 0.01 cos(0.5 x)) times a Maxwellian in v. Parameters: velocity truncation v in [-6,6]. Analytic solution: None. Representation solution: characteristic-flow representation in phase space coupled to Poisson's equation.",
+    "benchmarkInfo": {
+      "canonical_form": "f_t + v·∇_x f + E·∇_v f = 0;  -Δφ=ρ; E=-∇φ",
+      "domain": "x in [0,4pi], v in [-6,6]",
+      "boundary_conditions": "periodic in x and truncated velocity domain in v",
+      "initial_conditions": "f(x,v,0) = (1 + 0.01 cos(0.5 x)) times a Maxwellian in v",
+      "parameters": "velocity truncation v in [-6,6]",
+      "analytic_solution": "None",
+      "representation_solution": "characteristic-flow representation in phase space coupled to Poisson's equation"
+    },
+    "source": {
+      "verified_source_title": "Plasma Physics via Computer Simulation",
+      "verified_source_url": "https://ui.adsabs.harvard.edu/abs/1991ppcs.book.....B/abstract",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "32",
+    "title": "Vlasov–Maxwell",
+    "family": "Wave / kinetic / electromagnetics",
+    "dimensions": "1D2V",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Wave propagation / electromagnetics",
+    "description": "Vlasov–Maxwell. Consider the one-dimensional-two-velocity Vlasov–Maxwell system on x∈[0,2π/0.4], (v_x,v_y)∈[-1,1]^2, t>0 for the Weibel-instability benchmark. Boundary conditions: periodic in x and truncated velocity domain in velocity space. Initial conditions: f(x,v_x,v_y,0)=(1+0.01 cos(0.4x))(2π v_{th,x}v_{th,y})^{-1} exp(-v_x^2/(2v_{th,x}^2)-v_y^2/(2v_{th,y}^2)), with v_{th,x}=0.02, v_{th,y}=0.3, and zero initial electric and magnetic fields. Parameters: v_{th,x}=0.02 and v_{th,y}=0.3. Analytic solution: None. Representation solution: characteristic-flow representation in phase space coupled to Maxwell’s equations.",
+    "benchmarkInfo": {
+      "canonical_form": "Vlasov + Maxwell coupling",
+      "domain": "x∈[0,2π/0.4]",
+      "boundary_conditions": "periodic in x and truncated velocity domain in velocity space",
+      "initial_conditions": "f(x,v_x,v_y,0)=(1+0.01 cos(0.4x))(2π v_{th,x}v_{th,y})^{-1} exp(-v_x^2/(2v_{th,x}^2)-v_y^2/(2v_{th,y}^2)), with v_{th,x}=0.02, v_{th,y}=0.3, and zero initial electric and magnetic fields",
+      "parameters": "v_{th,x}=0.02 and v_{th,y}=0.3",
+      "analytic_solution": "None",
+      "representation_solution": "characteristic-flow representation in phase space coupled to Maxwell’s equations"
+    },
+    "source": {
+      "verified_source_title": "Plasma Physics via Computer Simulation",
+      "verified_source_url": "https://ui.adsabs.harvard.edu/abs/1991ppcs.book.....B/abstract",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "33",
+    "title": "Allen–Cahn",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Allen–Cahn. Benchmark problem: Shrinking circular interface. Formulation: u_t = ε^2 Δu - (u^3-u) on Ω=(0,1)^2 for t>0. Domain: Ω=(0,1)^2. Boundary conditions: periodic boundary conditions. Initial conditions: u(x,y,0)=tanh((r(x,y)-0.25)/(√2 ε)), where r(x,y)=((x-0.5)^2+(y-0.5)^2)^{1/2}. Parameters: ε=0.04. Analytic solution: None. Representation solution: traveling-wave reduction to an interface-profile ODE for the diffuse interface.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = ε^2 Δu - (u^3-u)",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "periodic boundary conditions",
+      "initial_conditions": "u(x,y,0)=tanh((r(x,y)-0.25)/(√2 ε)), where r(x,y)=((x-0.5)^2+(y-0.5)^2)^{1/2}",
+      "parameters": "ε=0.04",
+      "analytic_solution": "None",
+      "representation_solution": "traveling-wave reduction to an interface-profile ODE for the diffuse interface"
+    },
+    "source": {
+      "verified_source_title": "A Microscopic Theory for Antiphase Boundary Motion and Its Application to Antiphase Domain Coarsening",
+      "verified_source_url": "https://www.sciencedirect.com/science/article/pii/0001616079901962",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "34",
+    "title": "Cahn–Hilliard",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Cahn–Hilliard. Consider u_t = Δ(-ε^2Δu + u^3-u) on the periodic square [0,1]^2 with initial condition u(x,y,0)=0.05η(x,y), where η is uniform random noise in [-1,1]. Take ε=0.01 and mobility M=1. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = Δ( -ε^2 Δu + (u^3-u) )",
+      "domain": "the periodic square [0,1]^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Free Energy of a Nonuniform System. I. Interfacial Free Energy",
+      "verified_source_url": "https://pubs.aip.org/aip/jcp/article/28/2/258/74794/Free-Energy-of-a-Nonuniform-System-I-Interfacial",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "35",
+    "title": "Swift–Hohenberg",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "",
+    "description": "Swift–Hohenberg. Consider u_t = r u -(1+Δ)^2u - u^3 on the periodic square [0,16π]^2 with small random initial data of amplitude 10^-3. Take r=0.25. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = r u - (1+Δ)^2 u - u^3",
+      "domain": "the periodic square [0,16π]^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Autocatalytic Reactions in the Isothermal, Continuous Stirred Tank Reactor: Isolas and Other Forms of Multistability",
+      "verified_source_url": "https://www.sciencedirect.com/science/article/abs/pii/0009250983801328",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "36",
+    "title": "Kuramoto–Sivashinsky",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "",
+    "description": "Kuramoto–Sivashinsky. Consider u_t + u u_x + u_xx + u_xxxx = 0 on the periodic interval [0,32π] for t>0. Boundary conditions: periodic. Initial conditions: u(x,0)=cos(x/16)(1+sin(x/16)). Parameters: no free parameters. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + u u_x + u_xx + u_xxxx = 0",
+      "domain": "the periodic interval [0,32π]",
+      "boundary_conditions": "periodic",
+      "initial_conditions": "u(x,0)=cos(x/16)(1+sin(x/16))",
+      "parameters": "no free parameters",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Linear and Nonlinear Waves",
+      "verified_source_url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032954",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "37",
+    "title": "Fisher–KPP",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Fisher–KPP. Consider u_t = u_xx + u(1-u) on x∈ℝ, t>0. Boundary conditions: none on the whole line. Initial conditions: u(x,0)=1 for x<0 and u(x,0)=0 for x≥0. Parameters: no free parameters. Analytic solution: None. Representation solution: traveling-wave reduction to an ODE; the minimal wave speed is c*=2.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = D u_xx + r u(1-u)",
+      "domain": "x∈ℝ",
+      "boundary_conditions": "none on the whole line",
+      "initial_conditions": "u(x,0)=1 for x<0 and u(x,0)=0 for x≥0",
+      "parameters": "no free parameters",
+      "analytic_solution": "None",
+      "representation_solution": "traveling-wave reduction to an ODE; the minimal wave speed is c*=2"
+    },
+    "source": {
+      "verified_source_title": "Numerical Solution of Partial Differential Equations: An Introduction",
+      "verified_source_url": "https://www.cambridge.org/core/books/numerical-solution-of-partial-differential-equations/EB8E5037C4A49F78D91C0AF7EE4CC7FA",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "38",
+    "title": "Gray–Scott (2-species RD)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Gray–Scott (2-species RD). Consider u_t = D_uΔu - uv^2 + F(1-u) and v_t = D_vΔv + uv^2 -(F+k)v on the periodic square [0,1]^2 for t>0 with periodic boundary conditions. Take D_u=2×10^-5, D_v=1×10^-5, F=0.04, and k=0.06. Initialize from the homogeneous state u=1, v=0 except on the square 0.45≤x≤0.55 and 0.45≤y≤0.55, where set u=0.50 and v=0.25. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t=D_uΔu-uv^2+F(1-u); v_t=D_vΔv+uv^2-(F+k)v",
+      "domain": "the periodic square [0,1]^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Autocatalytic Reactions in the Isothermal, Continuous Stirred Tank Reactor: Isolas and Other Forms of Multistability",
+      "verified_source_url": "https://www.sciencedirect.com/science/article/abs/pii/0009250983801328",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "39",
+    "title": "Brusselator",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Brusselator. Consider u_t = A + u^2v -(B+1)u + D_uΔu and v_t = Bu - u^2v + D_vΔv on the periodic square [0,1]^2 for t>0 with periodic boundary conditions. Take A=1, B=3, D_u=0.02, and D_v=0.1. Initialize from the homogeneous steady state (u,v)=(A,B/A)=(1,3) plus a 1% sinusoidal perturbation, for example u(x,y,0)=1+0.01 sin(2πx)sin(2πy) and v(x,y,0)=3. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t=D_uΔu+A-(B+1)u+u^2v; v_t=D_vΔv+Bu-u^2v",
+      "domain": "the periodic square [0,1]^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Autocatalytic Reactions in the Isothermal, Continuous Stirred Tank Reactor: Isolas and Other Forms of Multistability",
+      "verified_source_url": "https://www.sciencedirect.com/science/article/abs/pii/0009250983801328",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "40",
+    "title": "Oregonator (BZ reaction)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Oregonator (BZ reaction). Consider the reaction–diffusion Oregonator system u_t = D_uΔu + qv - uv + u(1-u), v_t = D_vΔv - qv - uv + fw, and w_t = D_wΔw + u - w on Ω=(0,1)^2 for t>0 with homogeneous Neumann boundary conditions ∂_n u=∂_n v=∂_n w=0 on ∂Ω. Take D_u=D_v=D_w=10^-5, q=0.002, and f=1.3. Start from the homogeneous steady state plus a localized perturbation in the center. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "Reduced RD kinetics",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Oscillations in Chemical Systems. IV. Limit Cycle Behavior in a Model of a Real Chemical Reaction",
+      "verified_source_url": "https://pubs.aip.org/aip/jcp/article/60/5/1877/383951/Oscillations-in-chemical-systems-IV-Limit-cycle",
+      "source_type": "paper",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "41",
+    "title": "Advection–diffusion–reaction",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Advection–diffusion–reaction. Consider u_t + c·∇u = ∇·(D∇u) - λu on Ω=(0,1)^2 for t>0, where c(x,y)=(-(y-0.5), x-0.5) is the solid-body rotation field and D=10^-3 I. Boundary conditions: periodic on the unit square. Initial conditions: u(x,y,0)=exp(-100((x-0.7)^2+(y-0.5)^2)). Parameters: λ=1 and D=10^-3. Analytic solution: None. Representation solution: mild solution given by semigroup/Duhamel evolution.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t + c·∇u = ∇·(D∇u) + R(u)",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "periodic on the unit square",
+      "initial_conditions": "u(x,y,0)=exp(-100((x-0.7)^2+(y-0.5)^2))",
+      "parameters": "λ=1 and D=10^-3",
+      "analytic_solution": "None",
+      "representation_solution": "mild solution given by semigroup/Duhamel evolution"
+    },
+    "source": {
+      "verified_source_title": "Numerical Solution of Partial Differential Equations: An Introduction",
+      "verified_source_url": "https://www.cambridge.org/core/books/numerical-solution-of-partial-differential-equations/EB8E5037C4A49F78D91C0AF7EE4CC7FA",
+      "source_type": "textbook",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "42",
+    "title": "Keller–Segel (chemotaxis)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Keller–Segel (chemotaxis). Consider n_t = DΔn - χ∇·(n∇c) and c_t = D_cΔc + n - c on Ω=(0,1)^2 for t>0 with homogeneous Neumann boundary conditions ∂_n n=∂_n c=0 on ∂Ω. Take D=1, D_c=1, and χ=4. Use initial data n(x,y,0)=1+0.1 exp(-100((x-0.5)^2+(y-0.5)^2)) and c(x,y,0)=0. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "n_t = DΔn - χ∇·(n∇c);  c_t = D_cΔc + n - c",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Initiation of Slime Mold Aggregation Viewed as an Instability",
+      "verified_source_url": "https://pubmed.ncbi.nlm.nih.gov/5462335/",
+      "source_type": "source",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "43",
+    "title": "FitzHugh–Nagumo (reaction–diffusion)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "FitzHugh–Nagumo (reaction–diffusion). Consider u_t = D_u u_xx + u - u^3/3 - v and v_t = ε(u + a - b v) on 0<x<1, t>0 with homogeneous Neumann boundary conditions u_x(0,t)=u_x(1,t)=0 and v_x(0,t)=v_x(1,t)=0. Take D_u=10^-3, ε=0.08, a=0.7, and b=0.8. Start from u(x,0)=-1 and v(x,0)=-0.5 except on 0.45<x<0.55 where u(x,0)=1. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t=D_uΔu+u-u^3/3-v; v_t=D_vΔv+ε(u+a-bv)",
+      "domain": "0<x<1",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Impulses and Physiological States in Theoretical Models of Nerve Membrane",
+      "verified_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1366333/",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "44",
+    "title": "Hodgkin–Huxley (cable PDE)",
+    "family": "Other",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Hodgkin–Huxley (cable PDE). Consider C_m V_t = a V_xx - g_Na m^3 h (V-E_Na) - g_K n^4 (V-E_K) - g_L (V-E_L) + I_ext together with the gating ODEs m_t=α_m(V)(1-m)-β_m(V)m, h_t=α_h(V)(1-h)-β_h(V)h, and n_t=α_n(V)(1-n)-β_n(V)n on 0<x<1, t>0. Impose sealed-end boundary conditions V_x(0,t)=V_x(1,t)=0. Take C_m=1, g_Na=120, g_K=36, g_L=0.3, E_Na=115, E_K=-12, E_L=10.6, and I_ext=0. Start from the rest state V(x,0)=0 and gating variables at their equilibrium values. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "V_t = D V_xx - I_ion(V,m,h,n) + I_ext",
+      "domain": "0<x<1",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "A Quantitative Description of Membrane Current and Its Application to Conduction and Excitation in Nerve",
+      "verified_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "45",
+    "title": "Cable equation",
+    "family": "Other",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "",
+    "description": "Cable equation. Consider V_t = D V_xx - (1/τ)V + I(x,t) on 0<x<1, t>0. Boundary conditions: sealed-end, V_x(0,t)=V_x(1,t)=0. Initial conditions: V(x,0)=0. Parameters: D=1, τ=1, and I(x,t)=exp(-100(x-0.5)^2). Analytic solution: None. Representation solution: cable Green’s function / eigenfunction expansion on the finite interval.",
+    "benchmarkInfo": {
+      "canonical_form": "V_t = D V_xx - (1/τ)V + I(x,t)",
+      "domain": "0<x<1",
+      "boundary_conditions": "sealed-end, V_x(0,t)=V_x(1,t)=0",
+      "initial_conditions": "V(x,0)=0",
+      "parameters": "D=1, τ=1, and I(x,t)=exp(-100(x-0.5)^2)",
+      "analytic_solution": "None",
+      "representation_solution": "cable Green’s function / eigenfunction expansion on the finite interval"
+    },
+    "source": {
+      "verified_source_title": "Mathematical Physiology",
+      "verified_source_url": "https://nzdr.ru/data/media/biblio/kolxoz/B/Keener%20J.%2C%20Sneyd%20J.%20Mathematical%20physiology%20I..%20Cellular%20physiology%20%282ed.%2C%20Springer%2C%202009%29%28ISBN%200387758461%29%28O%29%28574s%29_B_.pdf",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "46",
+    "title": "Bioheat (Pennes)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Heat transfer / diffusion",
+    "description": "Bioheat (Pennes). Consider ρc T_t = kΔT + ω_b c_b (T_a-T) + Q(x,y) on Ω=(0,1)^2 for 0<t≤1 with Robin boundary condition -k ∂_n T = h(T-T_∞) on ∂Ω and initial condition T(x,y,0)=0. Take ρc=1, k=1, ω_b c_b=1, T_a=0, h=1, T_∞=0, and Q(x,y)=10 exp(-100((x-0.5)^2+(y-0.5)^2)). Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "ρc T_t = kΔT + ω_b c_b (T_a-T) + Q",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Analysis of Tissue and Arterial Blood Temperatures in the Resting Human Forearm",
+      "verified_source_url": "https://journals.physiology.org/doi/10.1152/jappl.1948.1.2.93",
+      "source_type": "paper",
+      "source_decision": "kept_current_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "47",
+    "title": "Tumor growth (Fisher-like)",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Tumor growth (Fisher-like). Consider u_t = DΔu + r u(1-u/K) on Ω=(0,1)^2 for t>0 with homogeneous Neumann boundary condition ∂_n u=0 on ∂Ω and initial condition u(x,y,0)=0.1 exp(-50((x-0.5)^2+(y-0.5)^2)). Take D=1, r=1, and K=1. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t = DΔu + r u(1-u/K)",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "The Wave of Advance of Advantageous Genes",
+      "verified_source_url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1937.tb02153.x",
+      "source_type": "paper",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "48",
+    "title": "Lotka–Volterra RD",
+    "family": "Reaction–diffusion / parabolic",
+    "dimensions": "2D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Reaction–diffusion / biology / pattern formation",
+    "description": "Lotka–Volterra RD. Consider u_t=D_uΔu+u(a-bv) and v_t=D_vΔv+v(-c+du) on Ω=(0,1)^2 for t>0 with homogeneous Neumann boundary conditions ∂_n u=∂_n v=0 on ∂Ω. Take D_u=1, D_v=10, a=b=c=d=1. Start from u(x,y,0)=1+0.01 sin(2πx)sin(2πy) and v(x,y,0)=1. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u_t=D_uΔu+u(a-bv); v_t=D_vΔv+v(-c+du)",
+      "domain": "Ω=(0,1)^2",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Mathematical Biology I: An Introduction",
+      "verified_source_url": "https://pcleon.if.ufrgs.br/pub/listas-sistdin/MurrayI.pdf",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "49",
+    "title": "Darcy flow",
+    "family": "Fluid dynamics",
+    "dimensions": "2D",
+    "steady": true,
+    "hasAnalytic": false,
+    "applicationField": "Porous media / subsurface flow",
+    "description": "Darcy flow. Consider -∇·(K(x,y)∇p)=q(x,y) in Ω=(0,1)^2 with boundary conditions p=1 on x=0, p=0 on x=1, and ∂_n p=0 on y=0 and y=1. Take q(x,y)=0 and K(x,y)=1 for x<0.5 and K(x,y)=10^3 for x≥0.5. This is a steady problem, so no initial condition is prescribed. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "u = -(k/μ)∇p;  ∇·u = q",
+      "domain": "",
+      "boundary_conditions": "",
+      "initial_conditions": "",
+      "parameters": "",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Flow Through Porous Media",
+      "verified_source_url": "https://books.google.com/books/about/Flow_Through_Porous_Media.html?id=KPxOAAAAMAAJ",
+      "source_type": "textbook",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  },
+  {
+    "id": "50",
+    "title": "Richards equation",
+    "family": "Fluid dynamics",
+    "dimensions": "1D",
+    "steady": false,
+    "hasAnalytic": false,
+    "applicationField": "Porous media / subsurface flow",
+    "description": "Richards equation. Consider θ(ψ)_t = ∂_z(K(ψ)(∂_z ψ + 1)) for 0<z<1, t>0, where θ(ψ)=(1+|ψ|^2)^(-1/2) and K(ψ)=θ(ψ)^2. Boundary conditions: infiltration flux K(ψ)(ψ_z+1)=-0.1 at z=0 and free-drainage condition ψ_z=0 at z=1. Initial conditions: ψ(z,0)=-1. Parameters: infiltration flux -0.1. Analytic solution: None.",
+    "benchmarkInfo": {
+      "canonical_form": "θ(p)_t = ∇·(K(p)(∇p+e_z))",
+      "domain": "",
+      "boundary_conditions": "infiltration flux K(ψ)(ψ_z+1)=-0.1 at z=0 and free-drainage condition ψ_z=0 at z=1",
+      "initial_conditions": "ψ(z,0)=-1",
+      "parameters": "infiltration flux -0.1",
+      "analytic_solution": "None",
+      "representation_solution": ""
+    },
+    "source": {
+      "verified_source_title": "Capillary Conduction of Liquids Through Porous Mediums",
+      "verified_source_url": "https://pubs.aip.org/aip/jap/article/1/5/318/1025629/CAPILLARY-CONDUCTION-OF-LIQUIDS-THROUGH-POROUS",
+      "source_type": "paper",
+      "source_decision": "updated_source"
+    },
+    "tags": []
+  }
+]
